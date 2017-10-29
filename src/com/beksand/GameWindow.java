@@ -37,7 +37,7 @@ public class GameWindow extends JFrame{
                 int y = mouseEvent.getY();
                 float duckDown = duckUp+duck.getHeight(null);
                 float duckRight= duckTop+duck.getWidth(null);
-                boolean isDuck = x <= duckUp && x>= duckDown && y <=duckRight && y >= duckTop;
+                boolean isDuck = x <= duckRight && x>= duckTop && y <=duckDown && y >= duckUp;
                 if (isDuck) {
                     duckTop=-100;
                     duckUp = (int) Math.random()*(gameField.getHeight()-duck.getHeight(null));
