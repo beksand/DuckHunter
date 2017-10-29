@@ -16,7 +16,7 @@ public class GameWindow extends JFrame{
     private static Image duck;
     private static float duckUp = 290;
     private static float duckTop = -100;
-    private static float duckSpeed = 100;
+    private static float duckSpeed = 70;
     private static int score=0;
 
     public static void main(String[] args) throws IOException {
@@ -41,7 +41,7 @@ public class GameWindow extends JFrame{
                 if (isDuck) {
                     duckTop=-100;
                     duckUp = (int) Math.random()*(gameField.getHeight()-duck.getHeight(null));
-                    duckSpeed= duckSpeed+20;
+                    duckSpeed= duckSpeed+10;
                     score+=5;
                     gameWindow.setTitle("Score: "+score);
                 }
